@@ -29,12 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Fastify-API antwortet auf `GET /health` mit 200 OK
   4. Turborepo-Build läuft sauber durch (`turbo build` ohne Fehler für alle Packages)
   5. TypeScript-Types in `packages/types` sind von API und Mobile-App importierbar
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Turborepo-Monorepo-Grundstruktur (apps/api, apps/mobile, apps/admin, packages/types)
-- [ ] 01-02: PostgreSQL/PostGIS + Drizzle-Schema + Docker-Compose-Umgebung
-- [ ] 01-03: Fastify-API-Gerüst mit Health-Endpoint, Basisrouting und Deployment auf server.godsapp.de
+- [ ] 01-01-PLAN.md — Turborepo-Monorepo-Grundstruktur (apps/api, apps/mobile, apps/admin, packages/types)
+- [ ] 01-02-PLAN.md — PostgreSQL/PostGIS + Drizzle-Schema + Docker-Compose-Umgebung
+- [ ] 01-03-PLAN.md — Fastify-API-Geruest mit Health-Endpoint, Vitest, Docker-Build und Deployment
 
 ### Phase 2: Event Discovery
 **Goal**: Nutzer können auf einer Karte kirchliche Events in ihrer Nähe finden und Details einsehen — ohne Account
