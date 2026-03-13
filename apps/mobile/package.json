@@ -2,10 +2,30 @@
   "name": "@prayback/mobile",
   "version": "0.0.0",
   "private": true,
+  "main": "expo-router/entry",
   "scripts": {
-    "build": "echo 'mobile build skip in CI'"
+    "build": "echo 'mobile build skip in CI'",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@prayback/types": "workspace:*"
+    "@prayback/types": "workspace:*",
+    "@tanstack/react-query": "^5.90.21",
+    "expo": "~52.0.49",
+    "expo-constants": "^17.0.8",
+    "expo-linking": "^7.0.5",
+    "expo-router": "~4.0.22",
+    "expo-status-bar": "^2.0.1",
+    "react-native": "0.76.7",
+    "react-native-gesture-handler": "^2.30.0",
+    "react-native-maps": "1.20.1",
+    "react-native-safe-area-context": "^5.7.0",
+    "react-native-screens": "^4.24.0",
+    "react-native-web": "^0.21.2",
+    "supercluster": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/supercluster": "^7.1.3",
+    "typescript": "^5.0.0"
   }
 }

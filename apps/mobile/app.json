@@ -1,1 +1,23 @@
-{ "name": "prayback-mobile", "slug": "prayback-mobile" }
+{
+  "expo": {
+    "name": "Kiek mal",
+    "slug": "kiek-mal",
+    "version": "0.1.0",
+    "scheme": "kiekmal",
+    "orientation": "portrait",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "de.kiek-mal.app",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": ["maps", "comgooglemaps"],
+        "NSLocationWhenInUseUsageDescription": "Kiek mal zeigt dir kirchliche Events in deiner Naehe"
+      }
+    },
+    "android": {
+      "adaptiveIcon": { "backgroundColor": "#ffffff" },
+      "package": "de.kiekmal.app"
+    },
+    "plugins": ["expo-router"]
+  }
+}
