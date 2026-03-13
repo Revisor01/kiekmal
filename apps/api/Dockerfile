@@ -15,7 +15,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY packages/types/ packages/types/
 COPY apps/api/ apps/api/
 COPY tsconfig.json ./
-RUN cd apps/api && pnpm build
+RUN cd apps/api && pnpm exec tsc
 
 # Production
 FROM base AS production
