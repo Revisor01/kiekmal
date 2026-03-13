@@ -7,7 +7,7 @@ FROM base AS deps
 COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./
 COPY apps/api/package.json apps/api/package.json
 COPY packages/types/package.json packages/types/package.json
-RUN pnpm install --frozen-lockfile --filter @prayback/api...
+RUN pnpm install --frozen-lockfile
 
 # Build
 FROM base AS build
