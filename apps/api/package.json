@@ -5,7 +5,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
+    "test": "vitest run",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx src/db/migrate.ts",
     "db:push": "drizzle-kit push",
@@ -14,6 +16,7 @@
   "dependencies": {
     "@prayback/types": "workspace:*",
     "drizzle-orm": "^0.38.0",
+    "fastify": "^5.0.0",
     "pg": "^8.13.0"
   },
   "devDependencies": {
@@ -21,6 +24,7 @@
     "@types/pg": "^8.11.0",
     "drizzle-kit": "^0.30.0",
     "tsx": "latest",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
   }
 }
