@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-03-13)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 1 of 3 in current phase
-Status: In progress
-Last activity: 2026-03-13 — Plan 01-01 abgeschlossen: Turborepo-Monorepo mit pnpm Workspaces aufgesetzt
+Plan: 3 of 3 in current phase
+Status: Checkpoint — awaiting deployment verification (kiek-mal.de)
+Last activity: 2026-03-13 — Plan 01-03 Tasks 1+2 abgeschlossen: Fastify-API mit Health-Endpoint, Dockerfile und docker-compose.prod.yml fertig
 
-Progress: [█░░░░░░░░░] 8%
+Progress: [███░░░░░░░] 25%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: ~3 Minuten
-- Total execution time: ~3 Minuten
+- Total plans completed: 3
+- Average duration: ~8 Minuten
+- Total execution time: ~23 Minuten
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 1 | ~3 min | ~3 min |
+| 01-foundation | 3 | ~23 min | ~8 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~3 min)
-- Trend: —
+- Last 5 plans: 01-01 (~3 min), 01-02 (~8 min), 01-03 (~12 min)
+- Trend: steigend (komplexere Tasks)
 
 *Updated after each plan completion*
 
@@ -47,10 +47,13 @@ Recent decisions affecting current work:
 - 01-01: packages/types exportiert direkt aus src/index.ts ohne Compile-Schritt — kein dist/-Verzeichnis noetig solange alle Consumer TypeScript verwenden
 - 01-01: apps/mobile build-Script ist nur ein echo (Expo baut via EAS, nicht Turborepo)
 - 01-01: .npmrc mit node-linker=hoisted gesetzt trotz moeglicher SDK-55-Fixes
+- 01-02: DB auf Server statt lokal — docker-compose v1 (docker-compose) auf server.godsapp.de
+- 01-03: buildApp() als Factory exportiert — ermoeglicht app.inject() Tests ohne HTTP-Stack
+- 01-03: Docker Build-Context ist Repo-Root — zwingend fuer pnpm Workspace-Auflosung
 
 ### Pending Todos
 
-None yet.
+- Deployment auf server.godsapp.de: git pull, .env erstellen, KeyHelp vHost fuer kiek-mal.de, docker-compose -f docker-compose.prod.yml up -d --build
 
 ### Blockers/Concerns
 
@@ -59,5 +62,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-13
-Stopped at: Completed 01-foundation-01-01-PLAN.md — Plan 01-01 abgeschlossen
+Stopped at: Completed 01-03 Tasks 1+2 — Checkpoint: awaiting deployment on server.godsapp.de
 Resume file: None
