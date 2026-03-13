@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Turborepo-Monorepo-Grundstruktur (apps/api, apps/mobile, apps/admin, packages/types)
+- [x] 01-01-PLAN.md — Turborepo-Monorepo-Grundstruktur (apps/api, apps/mobile, apps/admin, packages/types)
 - [ ] 01-02-PLAN.md — PostgreSQL/PostGIS + Drizzle-Schema + Docker-Compose-Umgebung
 - [ ] 01-03-PLAN.md — Fastify-API-Geruest mit Health-Endpoint, Vitest, Docker-Build und Deployment
 
@@ -92,7 +92,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 1/3 | In progress | - |
 | 2. Event Discovery | 0/3 | Not started | - |
 | 3. Auth + Admin | 0/3 | Not started | - |
 | 4. ChurchDesk-Sync | 0/1 | Not started | - |
