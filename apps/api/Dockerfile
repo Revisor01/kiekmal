@@ -13,17 +13,15 @@ RUN pnpm install --frozen-lockfile --filter @prayback/api...
 FROM base AS build
 COPY --from=deps /app/node_modules ./node_modules
 COPY --from=deps /app/apps/api/node_modules ./apps/api/node_modules
-COPY --from=deps /app/packages/types/node_modules ./packages/types/node_modules
 COPY packages/types/ packages/types/
 COPY apps/api/ apps/api/
 COPY tsconfig.json ./
-RUN cd apps/api && pnpm build
+RUN cd packages/types && pnpm build && cd /app/apps/api && pnpm build
 
 # Production
 FROM base AS production
 COPY --from=deps /app/node_modules ./node_modules
-COPY --from=deps /app/apps/api/node_modules ./apps/api/node_modules
-COPY --from=deps /app/packages/types ./packages/types
+COPY --from=build /app/packages/types ./packages/types
 COPY --from=build /app/apps/api/dist ./apps/api/dist
 COPY apps/api/drizzle ./apps/api/drizzle
 COPY apps/api/package.json ./apps/api/package.json
