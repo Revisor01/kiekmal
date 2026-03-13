@@ -7,17 +7,15 @@ FROM base AS deps
 COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./
 COPY apps/api/package.json apps/api/package.json
 COPY packages/types/package.json packages/types/package.json
-RUN pnpm install --frozen-lockfile --filter @prayback/api... --filter @prayback/types...
+RUN pnpm install --frozen-lockfile --filter @prayback/api...
 
 # Build
 FROM base AS build
 COPY --from=deps /app/node_modules ./node_modules
-COPY --from=deps /app/apps/api/node_modules ./apps/api/node_modules
-COPY --from=deps /app/packages/types/node_modules ./packages/types/node_modules
 COPY packages/types/ packages/types/
 COPY apps/api/ apps/api/
 COPY tsconfig.json ./
-RUN cd packages/types && pnpm build && cd /app/apps/api && pnpm build
+RUN cd apps/api && pnpm build
 
 # Production
 FROM base AS production
