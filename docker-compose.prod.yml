@@ -3,23 +3,28 @@ services:
     build:
       context: .
       dockerfile: apps/api/Dockerfile
-    ports:
-      - "3000:3000"
+    restart: unless-stopped
     environment:
-      DATABASE_URL: postgresql://prayback:prayback_dev@db:5432/prayback
+      DATABASE_URL: postgresql://prayback:${POSTGRES_PASSWORD}@db:5432/prayback
       PORT: "3000"
+      NODE_ENV: production
     depends_on:
       db:
         condition: service_healthy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kiekmal-api.rule=Host(`kiek-mal.de`)"
+      - "traefik.http.services.kiekmal-api.loadbalancer.server.port=3000"
+    networks:
+      - traefik
+      - default
 
   db:
     image: postgis/postgis:16-3.4
     restart: unless-stopped
-    ports:
-      - "5432:5432"
     environment:
       POSTGRES_USER: prayback
-      POSTGRES_PASSWORD: prayback_dev
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: prayback
     volumes:
       - pg_data:/var/lib/postgresql/data
@@ -31,3 +36,7 @@ services:
 
 volumes:
   pg_data:
+
+networks:
+  traefik:
+    external: true
