@@ -12,7 +12,7 @@ Prayback wird in vier Phasen gebaut: Zuerst entsteht das technische Fundament (M
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Monorepo-Setup, PostgreSQL/PostGIS, Fastify-API-Gerüst, Docker-Compose
+- [x] **Phase 1: Foundation** - Monorepo-Setup, PostgreSQL/PostGIS, Fastify-API-Gerüst, Docker-Compose
 - [ ] **Phase 2: Event Discovery** - Karte mit Events, Detailseiten, Filter, Navigation, Offline-Cache, Browse ohne Account
 - [ ] **Phase 3: Auth + Admin** - User-Accounts, Gemeinde-Admin-Verifizierung, Einladungscode-System, Web-Panel
 - [ ] **Phase 4: ChurchDesk-Sync** - Automatischer Event-Import aus ChurchDesk via BullMQ-Job
@@ -47,12 +47,13 @@ Plans:
   4. Nutzer tippt "Navigation starten" und wird an Google Maps / Apple Maps mit der Event-Adresse weitergeleitet
   5. Nutzer öffnet zuletzt besuchte Events und die Karte auch ohne Internetverbindung (Offline-Cache)
   6. Nutzer tippt auf eine Gemeinde und sieht das Gemeindeprofil: Name, Adresse, Website-Link, kommende Events
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: Event Service (API): PostGIS-Radius-Query, Event-CRUD, Kategoriefilter, Gemeindeprofil-Endpoint
-- [ ] 02-02: Map-View + Event-Liste (Mobile): react-native-maps, Clustering, Filterleiste, Detailseite, Navigation-Deep-Link
-- [ ] 02-03: Offline-Cache: TanStack Query + MMKV-Persistenz für Events und Kartendaten
+- [ ] 02-01-PLAN.md — Types erweitern, Event-API mit PostGIS-Radius-Query und Filtern, Congregations-Endpoint
+- [ ] 02-02-PLAN.md — Expo SDK 52 initialisieren, MapView mit Supercluster-Clustering
+- [ ] 02-03-PLAN.md — API-Anbindung, FilterBar, Event-Detailseite, Gemeindeprofil, Maps-Navigation
+- [ ] 02-04-PLAN.md — Offline-Cache mit MMKV und TanStack Query Persistence
 
 ### Phase 3: Auth + Admin
 **Goal**: Nutzer können Accounts erstellen, Gemeinde-Admins können verifiziert werden und Events über ein Web-Panel pflegen
@@ -92,8 +93,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/3 | Complete (awaiting deploy checkpoint) | 2026-03-13 |
-| 2. Event Discovery | 0/3 | Not started | - |
+| 1. Foundation | 3/3 | Complete | 2026-03-13 |
+| 2. Event Discovery | 0/4 | In progress | - |
 | 3. Auth + Admin | 0/3 | Not started | - |
 | 4. ChurchDesk-Sync | 0/1 | Not started | - |
 
