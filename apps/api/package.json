@@ -5,13 +5,21 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/index.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@prayback/types": "workspace:*"
+    "@prayback/types": "workspace:*",
+    "drizzle-orm": "^0.38.0",
+    "pg": "^8.13.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "@types/pg": "^8.11.0",
+    "drizzle-kit": "^0.30.0",
     "tsx": "latest",
     "typescript": "^5.0.0"
   }
