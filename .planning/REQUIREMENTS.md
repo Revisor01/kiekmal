@@ -7,7 +7,7 @@
 
 ### Event Discovery
 
-- [ ] **DISC-01**: User kann Karte mit Kirchen und Events in der Nähe sehen
+- [x] **DISC-01**: User kann Karte mit Kirchen und Events in der Nähe sehen
 - [ ] **DISC-02**: User kann Events nach Kategorie filtern (Gottesdienst, Konzert/Musik, Jugend/Konfi, Gemeindeleben, Lesung, Diskussion/Vortrag, Andacht)
 - [ ] **DISC-03**: User kann Events nach Radius und Datum filtern
 - [ ] **DISC-04**: User kann Event-Detailseite sehen (Titel, Datum, Zeit, Ort, Personen, Beschreibung, Bild, Anmeldung, Preis, Mitbringen)
@@ -64,7 +64,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DISC-01 | Phase 2 | Pending |
+| DISC-01 | Phase 2 | Complete |
 | DISC-02 | Phase 2 | Pending |
 | DISC-03 | Phase 2 | Pending |
 | DISC-04 | Phase 2 | Pending |
