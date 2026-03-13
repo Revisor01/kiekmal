@@ -3,6 +3,7 @@ import { serializerCompiler, validatorCompiler } from "fastify-type-provider-zod
 import cors from "@fastify/cors";
 import healthRoutes from "./routes/health.js";
 import eventsRoutes from "./routes/events.js";
+import congregationsRoutes from "./routes/congregations.js";
 
 export function buildApp() {
   const app = Fastify({ logger: false });
@@ -13,6 +14,7 @@ export function buildApp() {
   app.register(cors, { origin: true });
   app.register(healthRoutes);
   app.register(eventsRoutes);
+  app.register(congregationsRoutes);
 
   return app;
 }
