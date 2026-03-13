@@ -8,16 +8,16 @@
 ### Event Discovery
 
 - [x] **DISC-01**: User kann Karte mit Kirchen und Events in der Nähe sehen
-- [ ] **DISC-02**: User kann Events nach Kategorie filtern (Gottesdienst, Konzert/Musik, Jugend/Konfi, Gemeindeleben, Lesung, Diskussion/Vortrag, Andacht)
-- [ ] **DISC-03**: User kann Events nach Radius und Datum filtern
-- [ ] **DISC-04**: User kann Event-Detailseite sehen (Titel, Datum, Zeit, Ort, Personen, Beschreibung, Bild, Anmeldung, Preis, Mitbringen)
+- [x] **DISC-02**: User kann Events nach Kategorie filtern (Gottesdienst, Konzert/Musik, Jugend/Konfi, Gemeindeleben, Lesung, Diskussion/Vortrag, Andacht)
+- [x] **DISC-03**: User kann Events nach Radius und Datum filtern
+- [x] **DISC-04**: User kann Event-Detailseite sehen (Titel, Datum, Zeit, Ort, Personen, Beschreibung, Bild, Anmeldung, Preis, Mitbringen)
 - [ ] **DISC-05**: User kann Navigation zu einem Event starten (Weiterleitung an Google/Apple Maps)
 - [ ] **DISC-06**: User kann zuletzt geladene Events und Karte auch offline sehen
-- [ ] **DISC-07**: User kann minimales Gemeindeprofil sehen (Name, Adresse, Website-Link, kommende Events)
+- [x] **DISC-07**: User kann minimales Gemeindeprofil sehen (Name, Adresse, Website-Link, kommende Events)
 
 ### Authentication
 
-- [ ] **AUTH-01**: User kann App ohne Account nutzen (Karte browsen, Events sehen, navigieren)
+- [x] **AUTH-01**: User kann App ohne Account nutzen (Karte browsen, Events sehen, navigieren)
 - [ ] **AUTH-02**: User kann Account mit E-Mail und Passwort erstellen
 - [ ] **AUTH-03**: User-Session bleibt über App-Neustart erhalten
 
@@ -65,13 +65,13 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | DISC-01 | Phase 2 | Complete |
-| DISC-02 | Phase 2 | Pending |
-| DISC-03 | Phase 2 | Pending |
-| DISC-04 | Phase 2 | Pending |
+| DISC-02 | Phase 2 | Complete |
+| DISC-03 | Phase 2 | Complete |
+| DISC-04 | Phase 2 | Complete |
 | DISC-05 | Phase 2 | Pending |
 | DISC-06 | Phase 2 | Pending |
-| DISC-07 | Phase 2 | Pending |
-| AUTH-01 | Phase 2 | Pending |
+| DISC-07 | Phase 2 | Complete |
+| AUTH-01 | Phase 2 | Complete |
 | AUTH-02 | Phase 3 | Pending |
 | AUTH-03 | Phase 3 | Pending |
 | ADMN-01 | Phase 3 | Pending |

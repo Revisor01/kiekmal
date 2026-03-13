@@ -94,7 +94,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-03-13 |
-| 2. Event Discovery | 1/4 | In Progress|  |
+| 2. Event Discovery | 2/4 | In Progress|  |
 | 3. Auth + Admin | 0/3 | Not started | - |
 | 4. ChurchDesk-Sync | 0/1 | Not started | - |
 
