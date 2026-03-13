@@ -22,6 +22,30 @@ export interface EventDTO {
   description?: string;
   imageUrl?: string;
   source: "manual" | "churchdesk";
+  price?: string;
+  registrationUrl?: string;
+  bringItems?: string;
+  persons?: string;
+}
+
+/** Schlanke Variante fuer Listenansicht / Map-Marker — ohne description/bringItems */
+export interface EventListItemDTO {
+  id: string;
+  title: string;
+  startsAt: string;
+  endsAt?: string;
+  category: EventCategory;
+  location: {
+    lat: number;
+    lon: number;
+    address: string;
+  };
+  congregationId: string;
+  imageUrl?: string;
+  source: "manual" | "churchdesk";
+  price?: string;
+  registrationUrl?: string;
+  persons?: string;
 }
 
 export interface CongregationDTO {
@@ -34,3 +58,7 @@ export interface CongregationDTO {
     lon: number;
   };
 }
+
+export type CongregationDetailDTO = CongregationDTO & {
+  events: EventDTO[];
+};
